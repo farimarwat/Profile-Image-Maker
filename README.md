@@ -3,6 +3,8 @@ An android library to create most professional profile images
 
 **Note:Cartoonify Effect will come soon**
 
+<img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/demo.png" width="40%" height="40%"/>
+
 ### Implementation
 
         implementation 'io.github.farimarwat:profileimagemaker:1.0'
