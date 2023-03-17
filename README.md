@@ -7,7 +7,7 @@ An android library to create most professional profile images
 
         implementation 'io.github.farimarwat:profileimagemaker:1.0'
 
-### Usabe
+### Usage
 #### Step 1:
 First Create Profile Image Maker Instance:
 
