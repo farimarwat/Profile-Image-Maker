@@ -5,9 +5,27 @@ An android library to create most professional profile images. It removes backgr
 
 <img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/demo.png" width="40%" height="40%"/>
 
+#### Caution: If you want to get effect like below images then you are not supposed to be here. Below are cartoon effects created by StyleGan2 (by NVIDIA) and getting effects like this requires more resources. So try to do steps below for such market competitive results:
+- Learn Python
+- Purchase Google Cloud computing
+- Create API to get the target image
+- Process the image on server by StyleGan2
+- Post back the cartoonized image
+
+#### Requirements for StyleGain2
+- GPU: NVIDIA GPU with at least 8GB of VRAM, preferably a GTX 1080 Ti or better
+- RAM: At least 16GB of RAM
+- Disk space: Several hundred gigabytes of disk space to store the dataset and the model checkpoin
+- Operating system: Linux or Windows 10 with Windows Subsystem for Linux (WSL)
+- Software: CUDA Toolkit, cuDNN, TensorFlow, and optionally, PyTorch or other deep learning frameworks
+
+#### What I do not offer:
+<img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/stylegan2.png" width="40%" height="40%"/>
+
+
 ### Implementation
 
-        implementation 'io.github.farimarwat:profileimagemaker:1.0'
+  implementation 'io.github.farimarwat:profileimagemaker:1.0'
 
 ### Usage
 #### Step 1:
@@ -63,3 +81,13 @@ First apply cartoon effect and then remove background. If you interchange the se
 
 
 **Note: Cartoon effect applicatiion requires image dimension of 1:1 (square). If you feed in an image which is not squared, it will be skewed.**
+
+#### Change Log
+
+**v1.1:**
+
+1 cartoon effect added
+
+**v 1.0:**
+
+Initial release with image's background remover
