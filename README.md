@@ -30,8 +30,9 @@ git clone https://github.com/farimarwat/Profile-Image-Maker.git
 
 
 ### Implementation
-
+```
   implementation 'io.github.farimarwat:profileimagemaker:1.0'
+  ```
 
 ### Usage
 #### Step 1:
