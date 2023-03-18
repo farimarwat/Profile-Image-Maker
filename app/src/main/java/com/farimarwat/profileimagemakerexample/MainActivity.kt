@@ -33,9 +33,11 @@ class MainActivity : AppCompatActivity() {
         val getContent = registerForActivityResult(ActivityResultContracts.GetContent()){
             mBitmap = MediaStore.Images.Media.getBitmap(contentResolver,it)
             mBitmap?.let { src ->
-                mPim.applyRemoveBackground(src){ result ->
-                    binding.progressBar.visibility = View.GONE
-                    binding.pim.setImage(result)
+                mPim.applyCartoonEffect01(src){ result ->
+                    mPim.applyRemoveBackground(result){ res ->
+                        binding.progressBar.visibility = View.GONE
+                        binding.pim.setImage(res)
+                    }
                 }
             }
         }
