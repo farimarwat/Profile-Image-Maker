@@ -1,7 +1,7 @@
 ### Profile Image Maker
-An android library to create most professional profile images
+An android library to create most professional profile images. It removes background from you rselfie and apply cartoon effect as well
 
-**Note:Cartoonify Effect will come soon**
+**Note:More variants of Cartoon Effects will be added soon**
 
 <img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/demo.png" width="40%" height="40%"/>
 
@@ -62,4 +62,4 @@ First apply cartoon effect and then remove background. If you interchange the se
 
 
 
-
+**Note: Cartoon effect applicatiion requires image dimension of 1:1 (square). If you feed in an image which is not squared, it will be skewed.**
