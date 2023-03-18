@@ -42,12 +42,23 @@ Place ProfileImageView in your xml file:
 
 #### Final Step
 
-Apply remove background, get the image in form of bitmap and set it to ProfileImageView :
-Here "src" is bitmapt that needs to remove background and "result" is a bitmap with removed background
+First apply cartoon effect and then remove background. If you interchange the sequence then you will loose transparency. 
 
-    mPim.applyRemoveBackground(src){ result ->
-                        binding.pim.setImage(result)
+    val getContent = registerForActivityResult(ActivityResultContracts.GetContent()){
+            mBitmap = MediaStore.Images.Media.getBitmap(contentResolver,it)
+            mBitmap?.let { src ->
+                mPim.applyCartoonEffect01(src){ result ->
+                    mPim.applyRemoveBackground(result){ res ->
+                        binding.progressBar.visibility = View.GONE
+                        binding.pim.setImage(res)
                     }
+                }
+            }
+        }
+        binding.button.setOnClickListener {
+            binding.progressBar.visibility = View.VISIBLE
+            getContent.launch("image/*")
+        }
 
 
 
