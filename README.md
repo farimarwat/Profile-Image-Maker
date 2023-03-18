@@ -3,6 +3,12 @@ An android library to create most professional profile images. It removes backgr
 
 **Note:More variants of Cartoon Effects will be added soon**
 
+Sample app is included. Clone the project and open in android studio:
+
+```
+git clone https://github.com/farimarwat/Profile-Image-Maker.git
+```
+
 <img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/demo.png" width="40%" height="40%"/>
 
 #### Caution: If you want to get effect like below images then you are not supposed to be here. Below are cartoon effects created by StyleGan2 (by NVIDIA) and getting effects like this requires more resources. So try to do steps below for such market competitive results:
