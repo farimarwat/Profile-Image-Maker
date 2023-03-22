@@ -10,6 +10,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import com.farimarwat.profileimagemakerexample.databinding.ActivityMainBinding
 import pk.farimarwat.profileimagemaker.ProfileImageMaker
+import pk.farimarwat.profileimagemaker.listeners.ToonListener
 import java.io.File
 import java.io.FileOutputStream
 
@@ -33,12 +34,17 @@ class MainActivity : AppCompatActivity() {
         val getContent = registerForActivityResult(ActivityResultContracts.GetContent()){
             mBitmap = MediaStore.Images.Media.getBitmap(contentResolver,it)
             mBitmap?.let { src ->
-                mPim.applyCartoonEffect01(src){ result ->
-                    mPim.applyRemoveBackground(result){ res ->
-                        binding.progressBar.visibility = View.GONE
-                        binding.pim.setImage(res)
+                mPim.applyCartoonEffectPremium(mContext, 8,src,object : ToonListener {
+                    override fun onError(error: String) {
+                        Log.e(TAG,"Error: $error")
                     }
-                }
+
+                    override fun onSuccess(bitmap: Bitmap) {
+                        binding.progressBar.visibility = View.GONE
+                        binding.pim.setImage(bitmap)
+                    }
+
+                })
             }
         }
         binding.button.setOnClickListener {
