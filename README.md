@@ -10,7 +10,7 @@ git clone https://github.com/farimarwat/Profile-Image-Maker.git
 
 <img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/demo.png" width="40%" height="40%"/>
 
-### More Cartoon Effects
+### Premium Cartoon Effects Added
 
 <img src="https://github.com/farimarwat/Profile-Image-Maker/blob/master/pim_github.jpg" width="40%" height="40%"/>
 
