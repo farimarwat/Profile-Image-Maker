@@ -149,3 +149,9 @@ mBitmap?.let { src ->
 **v 1.0:**
 
 Initial release with image's background remover
+
+## Support Me
+If you want to donate then you are welcome to buy me a cup of tea via **PATREON** because this encourages me to give you more free stuff
+and continue to  maintain this library
+
+<a href="https://patreon.com/farimarwat">Buy Now!</a>
