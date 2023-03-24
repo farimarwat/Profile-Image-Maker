@@ -34,7 +34,7 @@ git clone https://github.com/farimarwat/Profile-Image-Maker.git
 
 ### Implementation
 ```
-  implementation 'io.github.farimarwat:profileimagemaker:1.2'
+  implementation 'io.github.farimarwat:profileimagemaker:1.3'
   ```
 
 ### Usage
