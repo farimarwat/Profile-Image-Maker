@@ -120,7 +120,7 @@ First apply cartoon effect and then remove background. If you interchange the se
 
 
 
-**Note: Cartoon effect applicatiion requires image dimension of 1:1 (square). If you feed in an image which is not squared, it will be skewed.**
+**Note: Traditional cartoon effect requires image dimension of 1:1 (square). If you feed in an image which is not squared, it will be skewed.**
 #### Premium Cartoon Effect:
 
 ```
@@ -140,7 +140,8 @@ First apply cartoon effect and then remove background. If you interchange the se
             }
 ```
 
-**applyCartoonEffectPremium()** methods takes 5 Params:
+**applyCartoonEffectPremium()** method takes 5 Params:
+**Important:Input image size for this method  must be 350x350. Otherwise you will get unwanted results**
 
 ```
  fun applyCartoonEffectPremium(
