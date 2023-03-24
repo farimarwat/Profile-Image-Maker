@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                     override fun onError(error: String) {
                         Log.e(TAG,"Error: $error")
                     }
-
                     override fun onSuccess(bitmap: Bitmap) {
                         binding.progressBar.visibility = View.GONE
                         binding.pim.setImage(bitmap)
