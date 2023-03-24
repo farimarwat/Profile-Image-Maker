@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <pk.farimarwat.profileimagemaker.ProfileImageView2
+    <pk.farimarwat.profileimagemaker.ProfileImageView
         android:id="@+id/pim"
         android:layout_width="300dp"
         android:layout_height="400dp"
-        app:pim2_backgroundcolor="@color/background"
-        app:pim2_borderwidth="20"
-        app:pim2_bordercolor="@color/border"
-        app:pim2_imagesize="600"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:pim_backgroundcolor="@color/white"
+        app:pim_bordercolor="@color/border"
+        app:pim_borderwidth="20"
+        app:pim_imagesize="600"
+        app:pim_backgroundimage="@drawable/background"
         />
     <ImageView
         android:id="@+id/imageview"

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         val getContent = registerForActivityResult(ActivityResultContracts.GetContent()){
             mBitmap = MediaStore.Images.Media.getBitmap(contentResolver,it)
             mBitmap?.let { src ->
-                mPim.applyCartoonEffectPremium(mContext, 8,src,object : ToonListener {
+                mPim.applyCartoonEffectPremium(mContext, 8,src,true,object : ToonListener {
                     override fun onError(error: String) {
                         Log.e(TAG,"Error: $error")
                     }
