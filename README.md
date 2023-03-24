@@ -54,42 +54,49 @@ First Create Profile Image Maker Instance:
 
 #### Step 2
 
-Place ProfileImageView in your xml file:
-**Note: There are two view of profile image. First one is for transparent image and second is for full image**
+Place ProfileImageView in your xml file
+
+**Note: There are two views of profile image. In the first view, upper body/head will overlap and will not be cut by the border but the second will cut overlaped area**
 
 ```
-<pk.farimarwat.profileimagemaker.ProfileImageView
-                android:id="@+id/pim"
-                android:layout_width="300dp"
-                android:layout_height="400dp"
-                app:pim_backgroundcolor="@color/background"
-                app:pim_borderwidth="20"
-                app:pim_bordercolor="@color/border"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
-				```
-        
-
-
-
-
+ <pk.farimarwat.profileimagemaker.ProfileImageView
+        android:id="@+id/pim"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pim_backgroundcolor="@color/white"
+        app:pim_bordercolor="@color/border"
+        app:pim_borderwidth="20"
+        app:pim_imagesize="600"
+        app:pim_backgroundimage="@drawable/background"
+        />
+```
 
 ```
-      <pk.farimarwat.profileimagemaker.ProfileImageView2
-            android:id="@+id/pim"
-            android:layout_width="300dp"
-            android:layout_height="400dp"
-            app:pim2_backgroundcolor="@color/background"
-            app:pim2_borderwidth="20"
-            app:pim2_bordercolor="@color/border"
-            app:pim2_imagesize="600"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            ></pk>
-			```
+<pk.farimarwat.profileimagemaker.ProfileImageView2
+        android:id="@+id/pim"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pim2_backgroundcolor="@color/white"
+        app:pim2_bordercolor="@color/border"
+        app:pim2_borderwidth="20"
+        app:pim2_imagesize="600"
+        app:pim2_backgroundimage="@drawable/background"
+        />
+```
+
+#### To Save image
+
+```
+ binding.button2.setOnClickListener {
+            saveBitmap(mContext, binding.pim.getBitmap())
+ }
+```
 
 #### Traditional Cartoon Effect:
 
@@ -117,8 +124,8 @@ First apply cartoon effect and then remove background. If you interchange the se
 #### Premium Cartoon Effect:
 
 ```
-mBitmap?.let { src ->
-                mPim.applyCartoonEffectPremium(mContext, 8,src,object : ToonListener {
+ mBitmap?.let { src ->
+                mPim.applyCartoonEffectPremium(mContext, 5,src,true,object :ToonListener{
                     override fun onError(error: String) {
                         Log.e(TAG,"Error: $error")
                     }
@@ -129,15 +136,33 @@ mBitmap?.let { src ->
                     }
 
                 })
+
+            }
 ```
 
-**applyCartoonEffectPremium()** methods takes 4 Params:
+**applyCartoonEffectPremium()** methods takes 5 Params:
+
+```
+ fun applyCartoonEffectPremium(
+ context: Context,
+        effect: Int = 0,
+        bitmapin: Bitmap,
+        transparent: Boolean,
+        toonListener: ToonListener
+    )
+```
+
 - Context
 - Effect Type (0 to 8)
 - Target bitmap
+- Transparant image
 - Listener
 
 #### Change Log
+**v1.3:**
+- Now get premium cartoonized image with transparancy
+- Add background to image
+
 **v1.2:**
 - 8 cartoon effects added
 - One another image view (ProfileImageView2) added
