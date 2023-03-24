@@ -141,6 +141,7 @@ First apply cartoon effect and then remove background. If you interchange the se
 ```
 
 **applyCartoonEffectPremium()** method takes 5 Params:
+
 **Important:Input image size for this method  must be 350x350. Otherwise you will get unwanted results**
 
 ```
