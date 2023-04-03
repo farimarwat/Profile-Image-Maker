@@ -165,6 +165,9 @@ First apply cartoon effect and then remove background. If you interchange the se
 - Transparant image
 - Listener
 
+### Important Note
+This library/sdk is completely for personal use only. You can not implement this in commercial apps e.g. in-app purchase or ads implemented apps. If you want to use it in commercial apps then you have to get a license for use in commercial apps otherwise in case of voilation, your app may lead to suspension on play store or even may lead to suspend/block your play console account.
+
 #### Change Log
 **v1.3:**
 - Now get premium cartoonized image with transparancy
